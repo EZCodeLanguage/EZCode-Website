@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>EzCode | Forum</title>
+      <link rel="icon" href="images/ezCode.png" type="image/x-icon">
+      <link rel="shortcut icon" href="images/ezCode.png" type="image/x-icon">
+      <meta name="keywords" content="Forum, Ask, Ezcode">
+      <meta name="description" content="Ezcode by JBros Development">
+      <meta name="author" content="Joseph H">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- awesome fontfamily -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- header -->
+      <header>
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class=" col-md-2 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img src="images/logo.png"></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-8 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item">
+                                 <a class="nav-link" href="Docs.html">Docs</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="Tutorials.html">Tutorials</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="Forum.html">Forum</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="Programs.html">Programs</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+                  <div class="col-md-2 d_none">
+                     <ul class="email text_align_right">
+                        <li> <a id="login" href="login.html"> Login </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+         <br>
+      </header>
+      <!-- end header --><!-- News -->
+      <!-- Forum -->
+      <div class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <style>             
+                     .main h1 {
+                       font-size: xx-large;
+                       font-weight: bolder;
+                       color: rgb(59, 59, 59);
+                       text-align: center;
+                     }
+                     
+                     .item {
+                       width: 80%;
+                       margin: 0 auto;
+                       padding: 20px;
+                       margin-bottom: 20px;
+                       background-color: #fff;
+                       border-radius: 5px;
+                       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                       text-align: left;
+                     }
+                     
+                     .item h2 {
+                        font-size: large;
+                        font-weight: bolder;
+                        color: rgb(59, 59, 59);
+                        text-align: left;
+                     }
+                     
+                     .item p {
+                        font-size: medium;
+                        color: rgb(59, 59, 59);
+                        text-align: left;
+                     }
+                     
+                     .container {
+                        overflow-y: auto;
+                        max-height: 100%;
+                     }
+                     
+                     .message-form {
+                        margin-top: 20px;
+                        display: none;
+                     }
+                     .message-form.active{
+                        display:block;
+                     }
+                     
+                     .message-form input {
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                     }
+                     
+                     #message-input {
+                        text-align: start;
+                        width: 100%;
+                        height: 200px;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                     }
+             
+                     #submit-button {
+                        width: 100%;
+                       background-color: #4CAF50;
+                       color: white;
+                       padding: 10px 20px;
+                       border: none;
+                       border-radius: 5px;
+                       cursor: pointer;
+                       text-align: center;
+                     }
+                     .popup {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 90%;
+                        height: 70%;
+                        max-height: 100%;
+                        background-color: #fff;
+                        border-radius: 5px;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                        padding: 20px;
+                        overflow-y: auto; /* Add overflow-y property */
+                        display: none;
+                        z-index: 99999;
+                     }
+
+                     .popup.active {
+                        display: block;   
+                     }
+
+                     .popup h2 {
+                        font-size: large;
+                        font-weight: bolder;
+                        color: rgb(59, 59, 59);
+                     }
+
+                     .popup p {
+                        font-size: medium;
+                        color: rgb(59, 59, 59);
+                     }
+
+                     .popup button {
+                        padding-left: 7px;
+                        padding-right: 7px;
+                        text-align: right;
+                     }
+                     .popup button :hover{
+                        background-color: rgb(71, 71, 71);
+                     }
+                     .popup input{
+                        width: 85%;
+                     }
+                     .popup-wrapper {
+                        display: none;
+                     }
+
+                     .popup-wrapper.active {
+                        display: block;
+                     }
+                     .openpopupbutton{
+                        width: 100%;
+                        padding: 4px;
+                     }
+                  </style>
+                  <div class="main">
+                     <h1>Forum</h1>
+                     <button class="openpopupbutton" id="openPopupButton">Ask a Question</button>
+                     <br><br>
+                     <div class="container" id="container">
+                     </div>
+                     <!--<div class="popup" id="popup">
+                        <button class="close-btn" id="closeBtn">&times;</button>
+                        <h2 id="popupTitle"></h2>
+                        <p id="popupAuthor"></p>
+                        <p id="popupDate"></p>
+                        <br>
+                        <p id="popupContent"></p>
+                        <br>
+                        <p id="popupVotes"></p>
+                        <button id="downvote" >Down Vote </button>&ensp;<button id="upvote"> Up Vote </button><br>
+                        <button id="report">REPORT</button><br>
+                        <input id="commentinput" placeholder="Answer or Ask Question or Leave a Comment">&emsp;<button id="commentbutton">Comment</button>
+                        <br><br>
+                        <div class="container" id="comments"></div>
+                     </div>-->
+                  </div>
+                  <script>
+                     // ... existing JavaScript code ...
+                  
+                     const openPopupButton = document.getElementById('openPopupButton');
+                     openPopupButton.addEventListener('click', function() {
+                        window.open('Create-Forum.html', '_blank')
+                     });
+                     
+                     const container = document.getElementById('container');
+                     // Add event listener to each item
+                     container.addEventListener('click', function(event) {
+                        const _item = event.target.closest('.item');
+                        var forumId = _item.dataset.id;
+                        var url = 'forum-details.html?id=' + forumId;
+                        window.open(url, '_blank');
+                     });
+                  </script>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- End Forum -->
+      <!-- footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-1">
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                     <div class="Informa helpful">
+                        <h3>Useful Links</h3>
+                        <ul>
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="Docs.html">Docs</a></li>
+                           <li><a href="Tutorials.html">Tutorials</a></li>
+                           <li><a href="Forum.html">Forum</a></li>
+                           <li><a href="Programs.html">Programs</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                     <div class="Informa">
+                        <h3>EzCode</h3>
+                        <ul>
+                           <li>JBros Development is
+                           </li>
+                           <li>the developer of EzCode.
+                           </li>
+                           <li>EzCode is open source
+                           </li>
+                           <li>and can be founf on Github.
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                     <div class="Informa conta">
+                        <h3>contact Us</h3>
+                        <ul>
+                           <li> <a href="https://jbros-development.web.app/">JBros Development
+                              </a>
+                           </li>
+                           <li> <a href="mailto:jbrosdevelopment@gmail.com">jbrosdevelopment@gmail.com
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright text_align_left">
+               <div class="container">
+                  <div class="row d_flex">
+                     <div class="col-md-6">
+                        <p>© 2023 All Rights Reserved.  <a href="https://jbros-development.web.app/"> JBros Development</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+   </body>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+   <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+   </script>
+   <script>
+      
+      const firebaseConfig = {
+         apiKey: "AIzaSyDq6biEKReP5Kn1d2eHFotzjzxByUffPxw",
+         authDomain: "jbros-development.firebaseapp.com",
+         projectId: "jbros-development",
+         storageBucket: "jbros-development.appspot.com",
+         messagingSenderId: "307622496025",
+         appId: "1:307622496025:web:02849be63df3fffcb3a788"
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // Initialize variables
+      const auth = firebase.auth()
+      const database = firebase.database()
+      
+      auth.onAuthStateChanged(user => {
+        if(user){
+          //logged in
+          LoggedIn(user)
+        }
+      })
+    
+      function LoggedIn(user){
+        const login = document.getElementById('login')
+    
+        if (user && user.displayName) {
+          login.innerHTML = user.displayName;
+          login.href = "logout.html"
+        } else {
+          login.innerHTML = "User";
+        }
+      }
+
+      // Reference to the forum messages
+      const messagesRef = database.ref('ezcode/Forum');
+
+      // Function to submit a new message
+      function submitMessage() {
+
+         // Check if a user is logged in
+         var user = firebase.auth().currentUser;
+         if (!user) {
+            console.log('No user logged in');
+            return;
+         }
+
+         // Get input values
+         var username = user.displayName;
+         var message = document.getElementById('message-input').value;
+         var title = document.getElementById('message-title').value;
+
+         // Save message to Firebase
+         messagesRef.push().set({
+            Author: username,
+            Message: message,
+            Title: title,
+            Date: Date.now(),
+            UpVotes: 0,
+            DownVotes: 0,
+            report: ''
+         }).catch((error) => {
+            console.log("Error setting forum item:", error);
+         });
+
+         // Clear input field
+         document.getElementById('message-input').value = '';
+         document.getElementById('message-title').value = '';
+      }
+      var id = ''
+      // Listen for new messages and display them
+      messagesRef.on('child_added', function(snapshot) {
+      var message = snapshot.val();
+      id = snapshot.key;
+      displayMessage(message);
+      });
+
+      // Function to display a message on the forum
+      function displayMessage(message) {
+      var container = document.getElementById('container');
+      var item = document.createElement('div');
+      item.classList.add('item');
+
+      var username = document.createElement('h2');
+      username.textContent = message.Title;
+      
+      var author = document.createElement('p');
+      author.textContent = message.Author;
+      
+      var content = document.createElement('p');
+      content.textContent = new Date(message.Date).toLocaleDateString();
+      
+      // Add the description as a data attribute
+      item.dataset.id = id;
+      item.dataset.Author = message.Author;
+      item.dataset.Title = message.Title;
+      item.dataset.Message = message.Message;
+      item.dataset.Date = new Date(message.Date).toLocaleDateString();
+      item.dataset.UpVotes = message.UpVotes;
+      item.dataset.DownVotes = message.DownVotes;
+
+      item.appendChild(username);
+      item.appendChild(author);
+      item.appendChild(content);
+      container.appendChild(item);
+      }
+
+      // Show the form if a user is logged in
+      firebase.auth().onAuthStateChanged(function(user) {
+      var messageForm = document.getElementById('message-form');
+      if (user) {
+         messageForm.style.display = 'block';
+      } else {
+         messageForm.style.display = 'none';
+      }
+      });
+   </script>
+</html>
