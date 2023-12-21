@@ -22,20 +22,46 @@ body, html {height: 100%}
   border-radius: 10px;
   text-align: center;
 }
+.hide-on-small-screen {
+      display: block; /* default display value for larger screens */
+    }
+
+    @media (max-width: 600px) {
+      .hide-on-small-screen {
+        display: none; /* hide the element when screen width is 600px or less */
+      }
+    }
 </style>
 </head>
 <body>
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge hide-on-small-screen">
     <a href="https://ez-code.web.app"><img alt="Logo Image" style="filter: brightness(110%);" src="https://raw.githubusercontent.com/JBrosDevelopment/EZCode/master/docs/Images/EZCode_Wide_Logo.Small.png"></a>
   </div>
-  <div class="w3-display-middle">
+  <style>
+    .main {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+    @media (max-width:600px) {
+      .main{
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  </style>
+  <div class="main">
     <h1 class="w3-jumbo w3-animate-top" style="text-align: center;"><strong>EZCode</strong></h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center"><a href="https://github.com/JBrosDevelopment/EZCode">View Repository</a> &ensp; | &ensp; <a href="https://github.com/JBrosDevelopment/EZCode/wiki">View Docs</a></p>
-    <p class="w3-large w3-center"><strong>EZCode</strong> is a visual programming language built off of <strong>C#</strong> and <strong>Microsoft's WinFoms</strong>. Write code <strong>faster</strong> with EZCode!</p>
-    <p class="w3-large w3-center" style="padding: 15px;"><a class="download-btn" href="https://github.com/JBrosDevelopment/EZCode/releases/latest">Install Latest for Windows</a></p>
+    <p><a href="https://github.com/JBrosDevelopment/EZCode">View Repository</a> &ensp; | &ensp; <a href="https://github.com/JBrosDevelopment/EZCode/wiki">View Docs</a></p>
+    <p><strong>EZCode</strong> is a visual programming language built off of <strong>C#</strong> and <strong>Microsoft's WinFoms</strong>. Write code <strong>faster</strong> with EZCode!</p>
+    <p style="padding: 15px;"><a class="download-btn" href="https://github.com/JBrosDevelopment/EZCode/releases/latest">Install Latest for Windows</a></p>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
     Powered by <a href="https://jbros-development.web.app">JBros Development</a>
