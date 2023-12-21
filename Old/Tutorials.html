@@ -50,6 +50,9 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
+                                 <a class="nav-link" href="index.html">News</a>
+                              </li>
+                              <li class="nav-item">
                                  <a class="nav-link" href="Docs.html">Docs</a>
                               </li>
                               <li class="nav-item">
@@ -61,13 +64,14 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="Programs.html">Programs</a>
                               </li>
+                              <li class="nav-item"> <a class="nav-link" id="login" href="login.html"> Login </a></li>
                            </ul>
                         </div>
                      </nav>
                   </div>
                   <div class="col-md-2 d_none">
                      <ul class="email text_align_right">
-                        <li> <a id="login" href="login.html"> Login </a></li>
+                        <!--<li class="nav-item"> <a class="nav-link" id="login" href="login.html"> Login </a></li>-->
                      </ul>
                   </div>
                </div>
@@ -76,9 +80,36 @@
          <br>
          <br>
       </header>
-      <!-- end header --><!-- News -->
+      <!-- end header -->
       <!-- Docs -->
-      <div class="about">
+      <style>
+         .main-doc {
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 90px 0;
+         }
+
+         .main-doc .titlepage::before {
+            border: #fff solid 5px;
+         }
+
+         .main-doc .titlepage {
+            padding-bottom: 0;
+            margin-bottom: 0px;
+         }
+
+         .main-doc .titlepage h2 {
+            color: #fff;
+         }
+
+         .main-doc .titlepage p {
+            line-height: 28px;
+            padding-top: 20px;
+            color: #fff;
+            font-size: 17px;
+         }
+      </style>
+      <div class="main-doc">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -115,7 +146,38 @@
                   </style>
                   <div class="main">
                      <h1>Tutorials</h1>
-                     <div id="container"></div>
+                     <div class="item">
+                        <a target="_blank" href="Tutorials/Basics.html"><h2>Basics</h2></a> 
+                        <p>This Tutorial shows you the basics of Ezcode. Make sure you have <a href="Programs.html">EzCode Editor</a> installed. </p>
+                     </div>
+                     <div class="item">
+                        <a target="_blank" href="Tutorials/LoopBasics.html"><h2>Make a simple Project using the Loop Statement</h2></a> 
+                        <p>This Tutorial shows you how to make a simple Project exploting the 'loop' statement. </p>
+                     </div>
+                     <div class="item">
+                        <a target="_blank" href="Tutorials/IDE.html"><h2>How to Use EzCode Editor</h2></a> 
+                        <p>This Tutorial shows you how to use EzCode Editor. </p>
+                     </div>
+                     <div class="item">
+                        <a target="_blank" href="Tutorials/Viewer.html"><h2>How to Use EzCode Viewer</h2></a> 
+                        <p>This Tutorial shows you how to use EzCode Viewer. </p>
+                     </div>
+                     <div class="item">
+                        <a target="_blank" href="Tutorials/Packager.html"><h2>How to Use EzCode Packager</h2></a> 
+                        <p>This Tutorial shows you how to use EzCode Packager. </p>
+                     </div>
+                     <div class="item">
+                        <a target="_blank" href="Tutorials/Player.html"><h2>How to Use EzCode Player</h2></a> 
+                        <p>This Tutorial shows you how to use EzCode Player. </p>
+                     </div>
+                     <div class="item">
+                        <a target="_blank" href="Tutorials/Pong.html"><h2>Make the Pong Game</h2></a> 
+                        <p>This Tutorial shows you how to make the famous Pong game using EzCode. This goes from coding to packaging. </p>
+                     </div>
+                     <div class="item">
+                        <a target="_blank" href="Tutorials/MoveCube.html"><h2>Make an Object Move With Key Input</h2></a> 
+                        <p>This Tutorial shows you how to make a simple program to move an object on key input using EzCode Editor. </p>
+                     </div>
                   </div>
                </div>
             </div>
@@ -151,7 +213,7 @@
                            </li>
                            <li>EzCode is open source
                            </li>
-                           <li>and can be founf on Github.
+                           <li>and can be found on Github.
                            </li>
                         </ul>
                      </div>
